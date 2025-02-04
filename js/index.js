@@ -12,9 +12,6 @@ let wrapper = document.querySelector(".wrapper");
 let header = document.querySelector("header");
 // document.body.append(header);
 
-
-
-
 let headerImg = document.createElement("img");
 headerImg.src = hero.image;
 header.appendChild(headerImg);
@@ -50,6 +47,41 @@ buttonMenu.appendChild(buttonContent1);
 buttonMenu.appendChild(buttonContent2);
 buttonContent1.classList.add("buttonContentChevron");
 buttonContent2.classList.add("buttonContentUser");
+
+// HERO SECTION
+let heroSection = document.querySelector(".hero");
+
+
+// H1
+let heroHeadline = document.createElement("h1");
+heroHeadline.innerHTML = hero.headline;
+heroSection.appendChild(heroHeadline);
+
+// p
+let heroParagraph = document.createElement("p");
+heroParagraph.innerHTML = hero.copy;
+heroSection.appendChild(heroParagraph);
+
+
+// Hero-section -> button
+let HeroButtonDiv = document.createElement("div");
+heroSection.appendChild(HeroButtonDiv);
+HeroButtonDiv.classList.add("HeroButtonDiv");
+
+let heroLinkImg = document.createElement("img");
+heroLinkImg.src = hero.icon;
+let heroLink = document.createElement("a");
+heroLink.href = "#";
+heroLink.innerHTML = "Explore";
+
+
+HeroButtonDiv.appendChild(heroLinkImg);
+HeroButtonDiv.appendChild(heroLink);
+
+// SERVICES SECTION
+
+
+
 
 
 

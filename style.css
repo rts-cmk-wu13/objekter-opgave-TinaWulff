@@ -1,6 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
 .wrapper {
-max-width: "1440px";
-margin: "0 auto";
+    max-width: "1440px";
+    margin: "0 auto";
 }
 
 header {
@@ -20,8 +37,8 @@ header img {
 nav {
     grid-area: 1/1/2/-1;
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 1;
+    /* grid-template-columns: 2; */
+    /* grid-template-rows: 1; */
     order: 2;
     padding-right: 6em;
     padding-left: 6em;
@@ -58,4 +75,59 @@ nav {
 
     color: #F78065;
     scale: 2;
+}
+
+.hero {
+    max-width: 51%;
+    width: 100%;
+    display: grid;
+    /* justify-items: center; */
+
+    position: relative;
+    top: -5em;
+    background-color: #fff;
+    margin-left:4em;
+    padding-top: 6em;
+    padding-bottom: 6em;
+    padding-left: 5em;
+    box-shadow: 0 4px 100px #000000;
+}
+
+.hero h1,
+p {
+    max-width: 70%;
+}
+
+.HeroButtonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #F78065;
+    max-width: 15.62em;
+    width: 100%;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+
+}
+
+.HeroButtonDiv a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 0.5em;
+    font-size: 18px;
+    /* justify-self: start; */
+}
+
+.hero  h1 {
+    font-size: 39px;
+    font-family: "Merriweather", serif;
+    margin: 0.2em 0;
+
+}
+
+.hero  p {
+    font-size: 20px;
+    margin: 2em 0;
+    font-weight: 300;
 }
