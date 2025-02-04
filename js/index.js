@@ -87,7 +87,7 @@ let serviceCard = document.createElement("article");
 serviceCard.classList.add("serviceCard");
 
 let serviceCard__Img = document.createElement("img");
-serviceCard__Img.textContent = services.illustration;
+serviceCard__Img.src = services.illustration;
 
 let serviceCard__Headline = document.createElement("h2");
 serviceCard__Headline.textContent = services.headline;
