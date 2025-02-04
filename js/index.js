@@ -80,8 +80,30 @@ HeroButtonDiv.appendChild(heroLink);
 
 // SERVICES SECTION
 
+let servicesSection = document.querySelector(".services");
 
+services.forEach(services => {
+let serviceCard = document.createElement("article");
+serviceCard.classList.add("serviceCard");
 
+let serviceCard__Img = document.createElement("img");
+serviceCard__Img.textContent = services.illustration;
+
+let serviceCard__Headline = document.createElement("h2");
+serviceCard__Headline.textContent = services.headline;
+
+let serviceCard__paragraph = document.createElement("p");
+serviceCard__paragraph.textContent = services.text;
+
+let serviceCard__Link = document.createElement("p");
+serviceCard__Link.textContent = services.linktext;
+
+servicesSection.appendChild(serviceCard__Img);
+servicesSection.appendChild(serviceCard__Headline);
+servicesSection.appendChild(serviceCard__paragraph);
+servicesSection.appendChild(serviceCard__Link);
+
+});
 
 
 
