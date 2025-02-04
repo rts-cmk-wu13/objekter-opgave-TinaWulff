@@ -1,0 +1,61 @@
+.wrapper {
+max-width: "1440px";
+margin: "0 auto";
+}
+
+header {
+    max-width: 100%;
+    display: grid;
+    grid-area: 1/1/2/-1;
+    justify-content: space-between;
+}
+
+header img {
+    grid-area: 1/1/2/-1;
+    max-width: 100%;
+    width: 100%;
+    order: 1;
+}
+
+nav {
+    grid-area: 1/1/2/-1;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    order: 2;
+    padding-right: 6em;
+    padding-left: 6em;
+    padding-top: 2em;
+    justify-content: space-between;
+}
+
+.icon {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.buttonMenu {
+    width: 5.3em;
+    height: 3.3em;
+    border-radius: 30px;
+    border-style: none;
+    grid-column: 2;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: 2;
+    align-items: center;
+    justify-items: center;
+}
+
+.buttonContentChevron {
+    grid-column: 1;
+}
+
+.buttonContentUser {
+    grid-column: 2;
+
+    color: #F78065;
+    scale: 2;
+}
