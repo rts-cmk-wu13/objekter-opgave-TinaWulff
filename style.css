@@ -1,5 +1,7 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 
 * {
@@ -9,16 +11,27 @@ box-sizing: border-box;
 }
 
 body {
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    margin: 0 auto;
 }
 
 .wrapper {
     max-width: "1440px";
     margin: "0 auto";
 }
+
+h1, h2, h3 {
+    font-family: "Merriweather", serif;
+}
+
+section {
+    max-width: 90%;
+}
+
+/* HEADER + HEADER SEKTION */
 
 header {
     max-width: 100%;
@@ -131,3 +144,81 @@ p {
     margin: 2em 0;
     font-weight: 300;
 }
+
+/* HEADER + HEADER SEKTION */
+
+/* SERVICES SECTION */
+
+.services {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(4,auto); */
+    justify-self: center;
+    column-gap: 3.5em;
+    row-gap: 2em;
+    margin-bottom: 12em;
+    align-items: start;
+}
+
+.serviceCard {
+  width: 100%;
+  max-width: 24em;  
+}
+
+.serviceCard img {
+    padding-bottom: 5.25em;
+    width: 60%;
+    max-width: 100%;
+    grid-row: 1;
+}
+
+.serviceCard h2{
+font-size: 24px;
+font-weight: 600;
+grid-row: 2;
+}
+
+.serviceCard p{
+margin: 1em 0;
+font-size: 16px;
+font-weight: 300;
+grid-row: 3;
+}
+
+.card-link {
+/* width: 100%;
+max-width: 20em; */
+margin-top: 1em;
+font-size: 18px;
+color: #F78065;
+font-weight: 600;
+text-decoration: none;
+grid-row: 4;
+}
+
+/* FACILITIES SECTION */
+
+.facilities {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-self: center;
+    column-gap: 3.5em;
+    margin-bottom: 5em;
+}
+
+.facilities img {
+    margin-bottom: 3em;
+}
+
+.facilities h2 {
+grid-column: span 4;
+margin-bottom: 4em;
+}
+
+.facilities p {
+margin-bottom: 1em;
+margin-top: 1em;
+}
+

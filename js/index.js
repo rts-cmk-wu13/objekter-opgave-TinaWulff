@@ -86,6 +86,7 @@ services.forEach(services => {
 let serviceCard = document.createElement("article");
 serviceCard.classList.add("serviceCard");
 
+
 let serviceCard__Img = document.createElement("img");
 serviceCard__Img.src = services.illustration;
 
@@ -95,21 +96,108 @@ serviceCard__Headline.textContent = services.headline;
 let serviceCard__paragraph = document.createElement("p");
 serviceCard__paragraph.textContent = services.text;
 
-let serviceCard__Link = document.createElement("p");
+let serviceCard__Link = document.createElement("a");
+serviceCard__Link.href = "#"; 
 serviceCard__Link.textContent = services.linktext;
+serviceCard__Link.classList.add("card-link");
 
-servicesSection.appendChild(serviceCard__Img);
-servicesSection.appendChild(serviceCard__Headline);
-servicesSection.appendChild(serviceCard__paragraph);
-servicesSection.appendChild(serviceCard__Link);
+serviceCard.appendChild(serviceCard__Img);
+serviceCard.appendChild(serviceCard__Headline);
+serviceCard.appendChild(serviceCard__paragraph);
+serviceCard.appendChild(serviceCard__Link);
+
+
+servicesSection.appendChild(serviceCard);
+});
+
+
+// FACILITIES SECTION
+let facilitiesSection = document.querySelector(".facilities");
+let facilityHeadline = document.createElement("h2");
+facilityHeadline.textContent = facilities.headline;
+facilitiesSection.append(facilityHeadline);
+
+facilities.options.forEach(facility => {
+    let facilityCard = document.createElement("article");
+    facilityCard.classList.add("facilityCard");
+
+    let facilityCard_icon = document.createElement("img");
+    facilityCard_icon.src = facility.icon;
+
+    let facilityCard_headline = document.createElement("h3");
+    facilityCard_headline.textContent = facility.headline;
+
+    let facilityCard_paragraph = document.createElement("p");
+    facilityCard_paragraph.textContent = facility.text;
+
+    let facilityCard_showmore = document.createElement("a");
+    facilityCard_showmore.href = "#";
+    facilityCard_showmore.textContent = facilities.link; // Bruger det overordnede "Show me more"
+    facilityCard_showmore.classList.add("card-link");
+
+    facilityCard.appendChild(facilityCard_icon);
+    facilityCard.appendChild(facilityCard_headline);
+    facilityCard.appendChild(facilityCard_paragraph);
+    facilityCard.appendChild(facilityCard_showmore);
+    facilitiesSection.appendChild(facilityCard);
 
 });
 
 
 
 
+//SITES SECTION
+let sitesSection = document.querySelector(".sites");
+
+let sitesSection__div = document.createElement("div");
+let sitesSection__div__headlinen = document.createElement("h2");
+let sitesSection__div__p = document.createElement("p");
+
+sitesSection.append(sitesSection__div);
+sitesSection__div.appendChild(sitesSection__div__headlinen);
+sitesSection__div.appendChild(sitesSection__div__p);
+
+let sitesSection__div__link = document.createElement("a");
+let sitesSection__div__link__icon = document.createElement("img");
+
+sitesSection__div.appendChild(sitesSection__div__link);
+sitesSection__div__link.appendChild(sitesSection__div__link__icon);
 
 
 
 
 
+
+/*
+
+
+// Advantages SECTION
+let advantagesSection = document.querySelector(".advantages");
+
+let advantagesHeadline = document.createElement("h2");
+advantagesHeadline.textContent = "Our Advantages";
+advantagesSection.append(advantagesHeadline);
+
+advantages.forEach(advantage => {
+    let advantagesCard = document.createElement("article");
+    advantagesCard.classList.add("advantagesCard");
+
+    let advantagesCard_icon = document.createElement("img");
+    advantagesCard_icon.src = advantage.icon;
+
+    let advantagesCard_headline = document.createElement("h3");
+    advantagesCard_headline.textContent = advantage.headline;
+
+    let advantagesCard_paragraph = document.createElement("p");
+    advantagesCard_paragraph.textContent = advantage.text;
+
+
+    advantagesCard.appendChild(advantagesCard_icon);
+    advantagesCard.appendChild(advantagesCard_headline);
+    advantagesCard.appendChild(advantagesCard_paragraph);
+
+    advantagesSection.appendChild(advantagesCard);
+
+});
+
+*/
