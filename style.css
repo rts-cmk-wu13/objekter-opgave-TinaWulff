@@ -31,6 +31,11 @@ section {
     max-width: 90%;
 }
 
+p {
+    display: block;
+    color: #000000;
+}
+
 /* HEADER + HEADER SEKTION */
 
 header {
@@ -107,7 +112,7 @@ nav {
 }
 
 .hero h1,
-p {
+.hero p {
     max-width: 70%;
 }
 
@@ -150,13 +155,13 @@ p {
 /* SERVICES SECTION */
 
 .services {
-    max-width: 90%;
+    max-width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(4,auto); */
+    grid-template-rows: 50% repeat(3, 1fr);
     justify-self: center;
     column-gap: 3.5em;
-    row-gap: 2em;
+    /* row-gap: 2em; */
     margin-bottom: 12em;
     align-items: start;
 }
@@ -164,13 +169,17 @@ p {
 .serviceCard {
   width: 100%;
   max-width: 24em;  
+  display: grid;
+  /* grid-template-rows: 50% repeat(3, 1fr); */
+  row-gap: 2%;
 }
 
 .serviceCard img {
-    padding-bottom: 5.25em;
+    /* padding-bottom: 5.25em; */
     width: 60%;
     max-width: 100%;
     grid-row: 1;
+    margin-bottom: 3em;
 }
 
 .serviceCard h2{
@@ -180,7 +189,7 @@ grid-row: 2;
 }
 
 .serviceCard p{
-margin: 1em 0;
+/* margin: 1em 0; */
 font-size: 16px;
 font-weight: 300;
 grid-row: 3;
@@ -189,23 +198,29 @@ grid-row: 3;
 .card-link {
 /* width: 100%;
 max-width: 20em; */
-margin-top: 1em;
+/* margin-top: 1em; */
 font-size: 18px;
 color: #F78065;
 font-weight: 600;
 text-decoration: none;
 grid-row: 4;
+justify-self: flex-start;
 }
 
 /* FACILITIES SECTION */
 
 .facilities {
-    max-width: 80%;
+    max-width: 83%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     justify-self: center;
     column-gap: 3.5em;
     margin-bottom: 5em;
+}
+
+.facilityCard {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
 }
 
 .facilities img {
@@ -222,3 +237,127 @@ margin-bottom: 1em;
 margin-top: 1em;
 }
 
+.card-link {
+    align-self: end;
+}
+
+/* SITES SECTION */
+.sites {
+    width: 100%;
+    max-width: 83%;
+
+    display: grid;
+    grid-template-columns: 30% repeat(3, 1fr);
+    grid-template-rows: repeat (3,auto);
+    justify-self: center;
+    column-gap: 2em;
+    margin-bottom: 8em;
+    margin-top: 8em;
+}
+
+.sitesSection__div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em
+}
+
+.sitesSection__div h2 {
+    font-size: 36px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 15.6em;
+}
+
+.sites_div_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F78065;
+    text-decoration: none;
+    color: #fff;
+    /* padding: 1em 5.5em; */
+    width: 80%;
+    height: 3em;
+    max-width: 13em;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.sites a:hover {
+cursor: pointer;
+}
+
+.sitesSection__card__view {
+    text-decoration: none;
+    color: #F78065;
+}
+
+.sitesSection__card__view:hover {
+    cursor: pointer;
+}
+
+.sites__card img {
+ width: 14.3em;
+ max-width: 100%;
+height: 26.1em;
+object-fit: cover;
+}
+
+.sites__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+ max-width: 14.3em;
+}
+
+.sites p {
+    max-width: 90%;
+    font-size: 14px;
+}
+
+.sites h3 {
+max-width: 90%;
+font-size: 24px;
+font-weight: 600;
+}
+
+/* Advantages SECTION */
+
+.advantages {
+    width: 100%;
+    max-width: 83%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5em;
+}
+
+.advantages h2 {
+    grid-column: span 3;
+    grid-row: 1;
+}
+
+.advantages p {
+    font-size: 14px;
+    grid-row: 4;
+}
+
+.advantagesCard {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 2em;
+    max-width: 24em;
+    margin-bottom: 8em;
+    margin-top: 4em;
+}
+
+.advantages h3 {
+    /* margin: 2em 0; */
+    grid-row: 3;
+}
+
+.advantages img {
+    grid-row: 2;
+}

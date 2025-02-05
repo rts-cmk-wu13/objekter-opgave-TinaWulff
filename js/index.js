@@ -3,8 +3,6 @@
 //eksempel på at udskrive alle overskrifter i services i konsollen:
 services.forEach(service => console.log(service.headline))
 
-
-
 /////////// HEADER
 //IMAGE
 let wrapper = document.querySelector(".wrapper");
@@ -30,7 +28,6 @@ icon.classList.add("icon");
 let buttonMenu = document.createElement("button");
 menuBar.appendChild(buttonMenu);
 buttonMenu.classList.add("buttonMenu");
-
 
 // buttonMenu.style.width = "5.4em";
 // buttonMenu.style.height = "3.3em";
@@ -132,6 +129,7 @@ facilities.options.forEach(facility => {
 
     let facilityCard_showmore = document.createElement("a");
     facilityCard_showmore.href = "#";
+
     facilityCard_showmore.textContent = facilities.link; // Bruger det overordnede "Show me more"
     facilityCard_showmore.classList.add("card-link");
 
@@ -144,31 +142,59 @@ facilities.options.forEach(facility => {
 });
 
 
-
-
 //SITES SECTION
+
+// DIV'en med HEADLINE, P & BUTTON
 let sitesSection = document.querySelector(".sites");
 
 let sitesSection__div = document.createElement("div");
-let sitesSection__div__headlinen = document.createElement("h2");
-let sitesSection__div__p = document.createElement("p");
+sitesSection__div.classList.add("sitesSection__div")
+let sitesSection__div__headline = document.createElement("h2");
+sitesSection__div__headline.textContent = sites.headline;
 
-sitesSection.append(sitesSection__div);
-sitesSection__div.appendChild(sitesSection__div__headlinen);
-sitesSection__div.appendChild(sitesSection__div__p);
+let sitesSection__div__p = document.createElement("p");
+sitesSection__div__p.textContent = sites.text;
 
 let sitesSection__div__link = document.createElement("a");
+sitesSection__div__link.classList.add("sites_div_button");
+sitesSection__div__link.href = "#";
+sitesSection__div__link.innerHTML = "Start";
+// sitesSection__div__link.innerHTML = `${sites.btnicon} Start`;
 let sitesSection__div__link__icon = document.createElement("img");
+sitesSection__div__link__icon.src = sites.btnicon;
+
+sitesSection.append(sitesSection__div);
+sitesSection__div.appendChild(sitesSection__div__headline);
+sitesSection__div.appendChild(sitesSection__div__p);
 
 sitesSection__div.appendChild(sitesSection__div__link);
 sitesSection__div__link.appendChild(sitesSection__div__link__icon);
 
+//Site CARDS
+
+sites.places.forEach(site => {
+let sitesSection__card = document.createElement("div");
+sitesSection__card.classList.add("sites__card"); 
+
+let sitesSection__card__img = document.createElement("img");
+sitesSection__card__img.src = site.img;
+let sitesSection__card__name = document.createElement("h3");
+sitesSection__card__name.textContent = site.name;
+let sitesSection__card__city = document.createElement("p");
+sitesSection__card__city.textContent = site.city;
+let sitesSection__card__view = document.createElement("a");
+sitesSection__card__view.classList.add("sitesSection__card__view");
+sitesSection__card__view.href = "#";
+sitesSection__card__view.innerHTML = "View site";
 
 
+sitesSection__card.appendChild(sitesSection__card__img);
+sitesSection__card.appendChild(sitesSection__card__name);
+sitesSection__card.appendChild(sitesSection__card__city);
+sitesSection__card.appendChild(sitesSection__card__view);
 
-
-
-/*
+sitesSection.append(sitesSection__card);
+});
 
 
 // Advantages SECTION
@@ -200,4 +226,5 @@ advantages.forEach(advantage => {
 
 });
 
-*/
+
+
